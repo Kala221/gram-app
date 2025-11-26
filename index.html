@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gram App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Configure Tailwind CSS to use 'class' for dark mode
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'dark-blue-primary': '#1A2B5B', // Deeper blue for main background
+              'dark-blue-secondary': '#122044', // Even deeper blue for sidebar
+              'light-blue-text': '#E0E7FF', // Light blue for text/icons
+              'dark-toggle-bg': '#5A67D8', // Color for the toggle background in dark mode
+              'light-toggle-bg': '#CBD5E0', // Color for the toggle background in light mode
+              'story-border-unviewed': '#A78BFA', // Purple for unviewed stories
+              'story-border-viewed': '#6B7280', // Gray for viewed stories
+            },
+            boxShadow: {
+              'custom-light': '0 0 15px rgba(224, 231, 255, 0.2)', // Light blue glow
+              'custom-dark': '0 0 15px rgba(0, 0, 0, 0.4)', // Darker shadow
+            }
+          },
+        },
+      };
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-dark-blue-primary text-light-blue-text font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
